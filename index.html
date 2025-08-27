@@ -5,78 +5,86 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>samalala2 // emo net</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Special+Elite&family=Share+Tech+Mono&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
 
     body {
-      background: #0a0a0a;
-      color: #eee;
-      font-family: 'Share Tech Mono', monospace;
       margin: 0;
       padding: 0;
-      overflow-x: hidden;
+      background: #0a0a0a url('https://i.imgur.com/4q2Rf9Q.jpg') repeat; /* grungy background */
+      color: #fff;
+      font-family: 'Special Elite', cursive;
     }
 
-    h1, h2 {
-      font-family: 'Special Elite', cursive;
+    h1 {
+      color: #ff006e;
+      text-align: center;
+      font-size: 3rem;
+      animation: blink 1s step-end infinite;
+    }
+
+    h2 {
       color: #39ff14;
-      text-shadow: 0 0 8px #39ff14, 0 0 15px #111;
+      text-align: center;
+      animation: blink 2s step-end infinite;
+    }
+
+    @keyframes blink {
+      50% { opacity: 0; }
     }
 
     .container {
       text-align: center;
-      padding: 4rem 1rem;
-    }
-
-    .glitch {
-      font-size: 3rem;
-      position: relative;
-      display: inline-block;
-      animation: glitch 1s infinite;
-    }
-
-    @keyframes glitch {
-      0% { text-shadow: 2px 2px #ff006e; }
-      25% { text-shadow: -2px -2px #39ff14; }
-      50% { text-shadow: 2px -2px #ff006e; }
-      75% { text-shadow: -2px 2px #39ff14; }
-      100% { text-shadow: 2px 2px #ff006e; }
+      padding: 2rem;
     }
 
     .links a {
-      display: inline-block;
-      margin: 1rem;
-      padding: 0.6rem 1.2rem;
-      background: #111;
-      border: 1px solid #39ff14;
-      border-radius: 6px;
       color: #39ff14;
-      text-decoration: none;
-      transition: 0.3s;
+      text-decoration: blink underline;
+      margin: 0 10px;
+      font-weight: bold;
     }
 
     .links a:hover {
-      background: #39ff14;
-      color: #111;
-      text-shadow: 0 0 10px #111;
+      color: #ff006e;
+    }
+
+    marquee {
+      color: #ff006e;
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
     }
 
     footer {
-      margin-top: 4rem;
+      text-align: center;
+      margin-top: 3rem;
       font-size: 0.8rem;
       opacity: 0.6;
+    }
+
+    audio {
+      display: block;
+      margin: 1rem auto;
     }
   </style>
 </head>
 <body>
+  <marquee behavior="scroll" direction="left">💀 absolutely no emo vibes & Green Day + MCR 💀</marquee>
+
   <div class="container">
-    <h1 class="glitch">samalala2</h1>
-    <h2>emo • punk • coder</h2>
-    <p>💀 Listening to Green Day & MCR while writing Python</p>
+    <h1>samalala2</h1>
+    <h2>totally not emo • punk • coder</h2>
+    <p>Listening to Green Day & MCR while writing Python</p>
+
+    <!-- Music player -->
+    <audio controls autoplay loop>
+      <source src="https://www.myinstants.com/media/sounds/green_day_boulevard_of_broken_dreams.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
 
     <div class="links">
       <a href="https://github.com/samalala2">GitHub</a>
       <a href="mailto:your@email.com">Contact</a>
-      <a href="https://mommybiteme.shop">Domain</a>
+      <a href="https://mc.mommybiteme.shop">Minecraft</a>
     </div>
   </div>
 
@@ -85,3 +93,4 @@
   </footer>
 </body>
 </html>
+
