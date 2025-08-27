@@ -1,79 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>samalala2 // emo net</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>samalala2 // emo net</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
 
-    body {
-      margin: 0;
-      padding: 0;
-      background: #0a0a0a url('https://i.imgur.com/4q2Rf9Q.jpg') repeat; /* grungy background */
-      color: #fff;
-      font-family: 'Special Elite', cursive;
-    }
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Special Elite', cursive;
+  background: #0a0a0a url('https://i.imgur.com/4q2Rf9Q.jpg') repeat;
+  color: #fff;
+  overflow-x: hidden;
+}
 
-    h1 {
-      color: #ff006e;
-      text-align: center;
-      font-size: 3rem;
-      animation: blink 1s step-end infinite;
-    }
+/* Main container */
+#main {
+  display: flex;
+  flex-wrap: wrap;
+}
 
-    h2 {
-      color: #39ff14;
-      text-align: center;
-      animation: blink 2s step-end infinite;
-    }
+/* Sidebars */
+.sidebar {
+  width: 200px;
+  padding: 1rem;
+  background: rgba(0,0,0,0.7);
+  margin: 1rem;
+  border: 2px solid #39ff14;
+  border-radius: 8px;
+}
 
-    @keyframes blink {
-      50% { opacity: 0; }
-    }
+.sidebar h3 {
+  color: #ff006e;
+  text-align: center;
+  animation: blink 1s step-end infinite;
+}
 
-    .container {
-      text-align: center;
-      padding: 2rem;
-    }
+/* Content area */
+.content {
+  flex: 1;
+  padding: 2rem;
+  margin: 1rem;
+  background: rgba(0,0,0,0.6);
+  border: 2px solid #ff006e;
+  border-radius: 8px;
+}
 
-    .links a {
-      color: #39ff14;
-      text-decoration: blink underline;
-      margin: 0 10px;
-      font-weight: bold;
-    }
+/* Blinking headings */
+h1, h2 {
+  color: #39ff14;
+  text-align: center;
+  animation: blink 2s step-end infinite;
+}
 
-    .links a:hover {
-      color: #ff006e;
-    }
+@keyframes blink {
+  50% { opacity: 0; }
+}
 
-    marquee {
-      color: #ff006e;
-      font-size: 1.2rem;
-      margin-bottom: 1rem;
-    }
+/* Neon links */
+a {
+  color: #39ff14;
+  text-decoration: blink underline;
+  font-weight: bold;
+  margin: 0.5rem;
+  display: inline-block;
+}
+a:hover {
+  color: #ff006e;
+}
 
-    footer {
-      text-align: center;
-      margin-top: 3rem;
-      font-size: 0.8rem;
-      opacity: 0.6;
-    }
+/* Marquee retro vibe */
+marquee {
+  color: #ff006e;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
 
-    audio {
-      display: block;
-      margin: 1rem auto;
-    }
-  </style>
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 3rem;
+  font-size: 0.8rem;
+  opacity: 0.6;
+}
+
+/* Animated pixel hearts */
+.heart {
+  color: #ff006e;
+  font-size: 2rem;
+  animation: heartbeat 1s infinite;
+  display: inline-block;
+  margin: 0 0.2rem;
+}
+
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.3); }
+}
+
+/* GIF decorations */
+.gif-decor {
+  display: block;
+  margin: 1rem auto;
+  max-width: 100%;
+  border: 2px solid #ff006e;
+  border-radius: 8px;
+}
+</style>
 </head>
 <body>
-  <marquee behavior="scroll" direction="left">💀 absolutely no emo vibes & Green Day + MCR 💀</marquee>
 
-  <div class="container">
+<!-- Scrolling marquee -->
+<marquee behavior="scroll" direction="left">💀 no emo vibes & Green Day + MCR 💀</marquee>
+
+<div id="main">
+  <!-- Left sidebar -->
+  <div class="sidebar">
+    <h3>About Me</h3>
+    <p>👻 IM NOT EMO!!<br>
+    🎸 Loves Green Day & My Chemical Romance<br>
+    🐍 Codes in Python & HTTP (kinda)<br>
+    ☕ Fueled by caffeine & heartbreak</p>
+    <img src="https://i.imgur.com/1ZvVkDc.gif" class="gif-decor" alt="emo gif">
+  </div>
+
+  <!-- Center content -->
+  <div class="content">
     <h1>samalala2</h1>
-    <h2>totally not emo • punk • coder</h2>
-    <p>Listening to Green Day & MCR while writing Python</p>
+    <h2>not emo • punk • coder</h2>
+    <p>💀 Welcome to my corner of the internet 💀</p>
 
     <!-- Music player -->
     <audio controls autoplay loop>
@@ -81,16 +138,42 @@
       Your browser does not support the audio element.
     </audio>
 
+    <!-- Neon links -->
     <div class="links">
       <a href="https://github.com/samalala2">GitHub</a>
       <a href="mailto:your@email.com">Contact</a>
       <a href="https://mc.mommybiteme.shop">Minecraft</a>
+      <a href="https://mommybiteme.shop">Website</a>
     </div>
+
+    <!-- Pixel hearts -->
+    <div style="text-align:center;">
+      <span class="heart">❤</span>
+      <span class="heart">❤</span>
+      <span class="heart">❤</span>
+      <span class="heart">❤</span>
+      <span class="heart">❤</span>
+    </div>
+
+    <!-- Emo GIF -->
+    <img src="https://i.imgur.com/j4y2U9X.gif" class="gif-decor" alt="glitch emo">
   </div>
 
-  <footer>
-    <p>Made with ☠️ and caffeine</p>
-  </footer>
+  <!-- Right sidebar -->
+  <div class="sidebar">
+    <h3>Friends / Links</h3>
+    <p>💀 my cool links:</p>
+    <a href="https://www.youtube.com/user/GreenDay">Green Day</a><br>
+    <a href="https://www.youtube.com/user/MCRofficial">MCR</a><br>
+    <a href="https://github.com/Crusty-0">My GitHub</a><br>
+    <a href="https://mc.mommybiteme.shop">Minecraft</a>
+  </div>
+</div>
+
+<footer>
+  <p>Made with ☠️ and caffeine</p>
+</footer>
+
 </body>
 </html>
 
